@@ -1,0 +1,29 @@
+// tsconfig.json
+
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    "types": ["node", "@types/express"],
+
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    "strict": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@libs/*": ["./src/libs/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
